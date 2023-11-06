@@ -1,0 +1,1 @@
+select distinct name from people as p join directors as d join ratings as r where p.id = d.person_id and d.movie_id = r.movie_id and r.rating >= 9;

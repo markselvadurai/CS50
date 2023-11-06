@@ -1,0 +1,1 @@
+select songs.name from songs join artists where artist_id = artists.id and artists.name = "Post Malone";

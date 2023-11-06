@@ -1,0 +1,2 @@
+I would characterize the listeners audio aura as a moodier but danceable music most likely on the slow side due to the valence being so low and danceability being high while the energy is still decently high.
+The listener might have been going through different phases which would make the assumptions about them from this list innaccurate. A better way to calculate it would be using dates to see their most recent or visited aura.

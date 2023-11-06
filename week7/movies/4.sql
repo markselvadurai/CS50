@@ -1,0 +1,1 @@
+select count(title) from movies join ratings as r where r.movie_id = movies.id and r.rating = 10;

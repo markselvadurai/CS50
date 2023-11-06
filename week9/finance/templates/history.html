@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<style>
+        tr:nth-child(even) {
+      background-color: #D6EEEE;
+    }
+        tr {
+            border-bottom: 1px solid #ddd
+        }
+        table {
+            margin: auto;
+            width : 50%;
+            border: 3px solid green;
+            padding: 10px;
+        }
+
+</style>
+
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Symbol</th>
+            <th>Price</th>
+            <th>Shares</th>
+            <th>Date</th>
+        </tr>
+        <tr>
+            {% for i in range(len) %}
+            <tr>
+                <td>{{ data[i]["type"] }}</td>
+                <td>{{ data[i]["symbol"] }}</td>
+                <td>{{ data[i]["price"] }}</td>
+                <td>{{ data[i]["shares"]  }}</td>
+                <td>{{ data[i]["date"]  }}</td>
+            </tr>
+            {% endfor %}
+        </tr>
+    </table>
+
+{% endblock %}

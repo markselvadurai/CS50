@@ -1,0 +1,1 @@
+select avg(r.rating) from movies join ratings as r where r.movie_id = movies.id and movies.year = 2012;

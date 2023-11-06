@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: This sort has a much higher running time compared to the other two.
+
+sort2 uses: Merge sort
+
+How do you know?: recursion sort consistantly gives faster results than the other two options.
+
+sort3 uses: Selection sort
+
+How do you know?: the Selection sort gives similar times no matter how the list is sorted.

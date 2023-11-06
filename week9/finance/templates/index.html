@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<style>
+        tr:nth-child(even) {
+      background-color: #D6EEEE;
+    }
+        tr {
+            border-bottom: 1px solid #ddd
+        }
+        table {
+            margin: auto;
+            width : 50%;
+            border: 3px solid green;
+            padding: 10px;
+        }
+
+</style>
+
+    <table>
+        <tr>
+            <th>Symbol</th>
+            <th>Price</th>
+            <th>Shares</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            {% for i in range(len) %}
+            <tr>
+            <td>{{ symbol[i]["symbol"] }}</td>
+            <td>{{ price[i] }}</td>
+            <td>{{ shares[i]["shares"] }}</td>
+            <td>{{ price[i] * shares[i]["shares"]  }}</td>
+            </tr>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Total:</td>
+            <td>{{ full }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Bank:</td>
+            <td>{{ bank }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Bank Total:</td>
+            <td>{{ full + bank }}</td>
+        </tr>
+    </table>
+
+{% endblock %}

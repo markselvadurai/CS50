@@ -1,0 +1,1 @@
+select title, r.rating from movies as m join ratings as r where r.movie_id = m.id and m.year  = 2010 order by r.rating desc, m.title;

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener("DOMContentLoaded", function()
+            {
+                const q1a = document.querySelector('.correct');
+                const q1f = document.querySelectorAll('.incorrect');
+
+                q1a.addEventListener('click', function()
+                {
+                    q1a.style.backgroundColor = '#99ff99';
+                    document.getElementById('result').innerHTML = 'Correct';
+                })
+
+                console.log(q1f)
+
+                q1f.forEach(button => button.addEventListener('click', function()
+                {
+                    button.style.backgroundColor = '#ff9999';
+                    document.getElementById('result').innerHTML = 'Incorrect';
+                }))
+
+                var answer = 'Switzerland';
+
+                document.getElementById('submitbox').addEventListener('click', function()
+                {
+                    var text = document.getElementById('textbox').value
+                    if(text == answer)
+                    {
+                        document.getElementById('result2').innerHTML = 'Correct'
+                        document.getElementById('textbox').style.backgroundColor = '#99ff99';
+                    }
+                    else
+                    {
+                        document.getElementById('result2').innerHTML = 'Incorrect'
+                        document.getElementById('textbox').style.backgroundColor = '#ff9999';
+                    }
+                })
+            })
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the approximate ratio of people to sheep in New Zealand?</h3>
+                <p id ='result'></p>
+                <h3><button type = "submit" class = "incorrect">6 people per 1 sheep</button> <button type = "submit" class = "incorrect">3 people per 1 sheep</button> <button type = "submit" class = "incorrect">1 person per 1 sheep</button> <button type ="submit" class ="incorrect">1 person per 3 sheep</button> <button type = "submit" class = "correct">1 person per 6 sheep</button></h3>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?</h3>
+                <p id ='result2'></p>
+                <input type = 'text' id ='textbox'> <button type = submit id ='submitbox'>Check Answer</button>
+            </div>
+        </div>
+    </body>
+</html>
